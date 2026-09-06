@@ -1,0 +1,6 @@
+{
+  "seed": 42,
+  "histories_equal": true,
+  "weights_equal": true,
+  "run": "resnet18_lr001"
+}

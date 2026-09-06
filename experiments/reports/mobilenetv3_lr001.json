@@ -1,0 +1,82 @@
+{
+  "config": {
+    "model": "mobilenetv3_small_100.lamb_in1k",
+    "seed": 42,
+    "image_size": 160,
+    "batch_size": 8,
+    "epochs": 6,
+    "freeze_epochs": 2,
+    "lr_head": 0.001,
+    "lr_backbone": 0.0001,
+    "weight_decay": 0.0001,
+    "num_workers": 0,
+    "threads": 2,
+    "run_name": "mobilenetv3_lr001",
+    "data_dir": "experiments/data/raw",
+    "manifest": "experiments/data/processed/split.csv",
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "stage": "head",
+      "train_loss": 7.164069272469783,
+      "train_accuracy": 0.17391304347826086,
+      "val_loss": 4.9213995500044385,
+      "val_accuracy": 0.2727272727272727
+    },
+    {
+      "epoch": 2,
+      "stage": "head",
+      "train_loss": 5.649384899415832,
+      "train_accuracy": 0.2463768115942029,
+      "val_loss": 4.0942700125954365,
+      "val_accuracy": 0.2727272727272727
+    },
+    {
+      "epoch": 3,
+      "stage": "all",
+      "train_loss": 3.1160961830097698,
+      "train_accuracy": 0.4927536231884058,
+      "val_loss": 1.5022540038282222,
+      "val_accuracy": 0.7727272727272727
+    },
+    {
+      "epoch": 4,
+      "stage": "all",
+      "train_loss": 0.9050641017223614,
+      "train_accuracy": 0.8115942028985508,
+      "val_loss": 0.4336962327361107,
+      "val_accuracy": 0.8636363636363636
+    },
+    {
+      "epoch": 5,
+      "stage": "all",
+      "train_loss": 0.3236467699803736,
+      "train_accuracy": 0.927536231884058,
+      "val_loss": 0.4812991510738026,
+      "val_accuracy": 0.8181818181818182
+    },
+    {
+      "epoch": 6,
+      "stage": "all",
+      "train_loss": 0.34093488602419436,
+      "train_accuracy": 0.927536231884058,
+      "val_loss": 0.5026196837425232,
+      "val_accuracy": 0.8636363636363636
+    }
+  ],
+  "seconds": 8.964305200002855,
+  "best_validation_accuracy": 0.8636363636363636,
+  "best_validation_loss": 0.4336962327361107,
+  "parameters": 1520931
+}

@@ -1,0 +1,7 @@
+{
+  "winner": "resnet18_lr001",
+  "families": [
+    "mobilenetv3_lr001",
+    "resnet18_lr001"
+  ]
+}

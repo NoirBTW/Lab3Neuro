@@ -1,0 +1,10 @@
+{
+  "test_images": 25,
+  "max_logit_error": 1.1324882507324219e-06,
+  "predictions_equal": true,
+  "preprocessing_equal": true,
+  "onnx_megabytes": 44.702738,
+  "cpu_median_ms": 8.398400008445606,
+  "cpu_p95_ms": 9.810135007137433,
+  "timing": "batch 1, two CPU threads, 10 warmup + 50 runs, preprocessing excluded"
+}
