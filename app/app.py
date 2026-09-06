@@ -7,7 +7,7 @@ import gradio as gr
 from app.preprocessing import preprocess
 
 BASE=Path(__file__).resolve().parent
-LABELS={'butterfly':'Бабочка монарх','dragonfly':'Дозорщик-император','ladybird':'Семиточечная божья коровка'}
+LABELS={'butterfly':'Бабочка','dragonfly':'Стрекоза','ladybird':'Божья коровка'}
 
 
 def build_app():
@@ -22,7 +22,7 @@ def build_app():
         return {LABELS.get(label,label):float(p) for label,p in zip(metadata['classes'],probabilities)}
     interface=gr.Interface(predict,inputs=gr.Image(type='pil',label='Изображение'),
                    outputs=gr.Label(label='Результат',num_top_classes=3),title='Три вида насекомых',
-                   description='Загрузите фото бабочки монарха, дозорщика-императора или семиточечной божьей коровки. '
+                   description='Загрузите фото бабочки, стрекозы или божьей коровки. '
                    'Модель выбирает один из этих трёх видов; другие виды она не определяет.',
                    flagging_mode='never')
     return interface
